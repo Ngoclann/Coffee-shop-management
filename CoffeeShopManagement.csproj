@@ -1,0 +1,231 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C69266A9-2FA4-45BF-96BE-3753DA276EC1}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>CoffeeShopManagement</RootNamespace>
+    <AssemblyName>CoffeeShopManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="dal\CategoryDao.cs" />
+    <Compile Include="dal\CustomerDao.cs" />
+    <Compile Include="dal\DBContext.cs" />
+    <Compile Include="dal\MaterialDAO.cs" />
+    <Compile Include="dal\ProductDao.cs" />
+    <Compile Include="dal\ProviderDao.cs" />
+    <Compile Include="dal\PurchaseDetailDao.cs" />
+    <Compile Include="dal\StaffDao.cs" />
+    <Compile Include="dal\UserDao.cs" />
+    <Compile Include="gui\AddAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\AddAccountForm.Designer.cs">
+      <DependentUpon>AddAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\ChangePasswordForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\ChangePasswordForm.Designer.cs">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\CustomerAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\CustomerAction.Designer.cs">
+      <DependentUpon>CustomerAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Customer_SellOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\Customer_SellOrder.Designer.cs">
+      <DependentUpon>Customer_SellOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\FormCustomer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\FormCustomer.Designer.cs">
+      <DependentUpon>FormCustomer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\PurchaseInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\PurchaseInvoice.Designer.cs">
+      <DependentUpon>PurchaseInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Search Purchase Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\Search Purchase Invoice.Designer.cs">
+      <DependentUpon>Search Purchase Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\SellInvoiceSearching.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\SellInvoiceSearching.Designer.cs">
+      <DependentUpon>SellInvoiceSearching.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\StaffAction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\StaffAction.Designer.cs">
+      <DependentUpon>StaffAction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\MainScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\MainScreen.Designer.cs">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\ProviderForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\ProviderForm.Designer.cs">
+      <DependentUpon>ProviderForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\SearchProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\SearchProduct.Designer.cs">
+      <DependentUpon>SearchProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\StaffForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\StaffForm.Designer.cs">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="gui\ProductForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="gui\ProductForm.Designer.cs">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="entities\Category.cs" />
+    <Compile Include="entities\Customer.cs" />
+    <Compile Include="entities\Product.cs" />
+    <Compile Include="entities\Provider.cs" />
+    <Compile Include="entities\PurchaseDetail.cs" />
+    <Compile Include="entities\PurchaseOrder.cs" />
+    <Compile Include="entities\SellDetail.cs" />
+    <Compile Include="entities\SellOrder.cs" />
+    <Compile Include="entities\Staff.cs" />
+    <Compile Include="entities\User.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="gui\AddAccountForm.resx">
+      <DependentUpon>AddAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\ChangePasswordForm.resx">
+      <DependentUpon>ChangePasswordForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\CustomerAction.resx">
+      <DependentUpon>CustomerAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Customer_SellOrder.resx">
+      <DependentUpon>Customer_SellOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\FormCustomer.resx">
+      <DependentUpon>FormCustomer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\PurchaseInvoice.resx">
+      <DependentUpon>PurchaseInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Search Purchase Invoice.resx">
+      <DependentUpon>Search Purchase Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\SellInvoiceSearching.resx">
+      <DependentUpon>SellInvoiceSearching.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\StaffAction.resx">
+      <DependentUpon>StaffAction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\MainScreen.resx">
+      <DependentUpon>MainScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\ProviderForm.resx">
+      <DependentUpon>ProviderForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\SearchProduct.resx">
+      <DependentUpon>SearchProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\StaffForm.resx">
+      <DependentUpon>StaffForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="gui\ProductForm.resx">
+      <DependentUpon>ProductForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
